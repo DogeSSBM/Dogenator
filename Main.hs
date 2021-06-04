@@ -1,4 +1,8 @@
+:set prompt "ghci> "
 module Main where
 
 main :: IO ()
-main = putStrLn "Hello, Haskell!"
+main = do
+	putStrLn "Gib input! -"
+	input <- getLine
+	putStrLn ("Your input: " ++ input)
